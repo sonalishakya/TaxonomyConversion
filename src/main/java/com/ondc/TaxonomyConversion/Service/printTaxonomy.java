@@ -10,12 +10,12 @@ public class printTaxonomy {
 
     private static Map<String, String> getTaxonomyMap() {
         Map<String, String> InputOutput = new HashMap<>();
-//        InputOutput.put("Autoparts & Components Taxonomy v2.0", "output-file-autoparts");
+        InputOutput.put("Autoparts & Components Taxonomy v2.0", "output-file-autoparts");
         InputOutput.put("Bulding & Construction Supplies v2.0", "output-file-construction");
         InputOutput.put("Fashion Taxonomy v2.0", "output-file-fashion");
-//        InputOutput.put("Chemical Taxonomy v2.0", "output-file-chemical");
-//        InputOutput.put("Hardware & Industrial Equipment v2.0", "output-file-hardware");
-//        InputOutput.put("Electronics & Electrical Appliances v2.0", "output-file-electronics");
+        InputOutput.put("Chemical Taxonomy v2.0", "output-file-chemical");
+        InputOutput.put("Hardware & Industrial Equipment v2.0", "output-file-hardware");
+        InputOutput.put("Electronics & Electrical Appliances v2.0", "output-file-electronics");
         return InputOutput;
     }
 
@@ -123,12 +123,14 @@ public class printTaxonomy {
 
     // Method to clean the key (replace spaces with underscores, remove brackets, handle slashes)
     private static String cleanKey(String key) {
-        // Replace spaces with underscores
-        key = key.trim();
-        key = key.replaceAll("\\s+", "_");
 
         // Remove content in parentheses
         key = key.replaceAll("\\(.*?\\)", "");
+
+        key = key.trim();
+
+        // Replace spaces with underscores
+        key = key.replaceAll("\\s+", "_");
 
         // Remove everything after and including a slash
         if (key.contains("/")) {
