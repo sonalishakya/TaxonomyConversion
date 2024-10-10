@@ -1,4 +1,4 @@
-package com.ondc.TaxonomyConversion.Taxonomy;
+package com.ondc.TaxonomyConversion.Service;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,8 +16,8 @@ import java.util.Map;
 
 public class printAppliance {
     public static void main(String[] args) {
-        String excelFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\Electronics & Electrical Appliances v2.0.xlsx";
-        String outputFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\output-file-appliance.txt";
+        String excelFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\src\\main\\java\\com\\ondc\\TaxonomyConversion\\Taxonomy\\Electronics & Electrical Appliances v2.0.xlsx";
+        String outputFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\src\\main\\java\\com\\ondc\\TaxonomyConversion\\Output\\output-file-appliance.txt";
 
         try {
             FileInputStream excelFile = new FileInputStream(new File(excelFilePath));
