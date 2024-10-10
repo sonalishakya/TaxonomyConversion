@@ -24,7 +24,7 @@ public class printTaxonomy {
 
         for (Map.Entry<String, String> s : InputOutput.entrySet()) {
             String excelFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\src\\main\\java\\com\\ondc\\TaxonomyConversion\\Taxonomy\\" + s.getKey() + ".xlsx";
-            String outputFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\src\\main\\java\\com\\ondc\\TaxonomyConversion\\Output\\" + s.getValue() + ".txt";
+            String outputFilePath = "C:\\Users\\Sonali Shakya\\Documents\\GitHub\\buyer-app\\TaxonomyConversion\\src\\main\\java\\com\\ondc\\TaxonomyConversion\\Output\\" + s.getValue() + ".json";
 
             System.out.println("Processing file - " + s.getKey());
 
@@ -131,6 +131,8 @@ public class printTaxonomy {
 
         // Replace spaces with underscores
         key = key.replaceAll("\\s+", "_");
+
+        key = key.replaceAll("&", "And");
 
         // Remove everything after and including a slash
         if (key.contains("/")) {
